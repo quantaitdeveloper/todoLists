@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "antd/dist/antd.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  padding: 50px;
+  margin: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  .add-new {
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .view-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    .list-todo {
+      padding: 20px;
+    }
+    .bulk-action {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #e0e0e0;
+      .action {
+        .ant-btn {
+          width: 100px;
+          margin: 0 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .bulk-action {
+        flex-direction: column;
+        height: fit-content;
+        .action {
+          margin-top: 20px;
+          .ant-btn {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+  .add-new-title {
+    text-align: center;
+  }
+
+  .detail-btn {
+    border: none;
+    font-size: 0.8em;
+  }
+
+  .remove-btn {
+    background-color: #d9534f;
+    border: none;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    margin: 0;
+    padding: 10px;
+  }
+}
