@@ -27,7 +27,13 @@ export class AuthStore {
 
     @action 
     async action_addNewTask(todo: Todo) {
-        this.todoLists = [...this.todoLists, todo];
+        // this.todoLists = [...this.todoLists, todo];
+        if (!_.isEmpty(this.todoLists)) {
+            this.todoLists = [...this.todoLists, todo];
+        } else {
+            this.todoLists = [todo];
+        }
+        
         await this.action_saveToLocal(this.todoLists)
     }
 
